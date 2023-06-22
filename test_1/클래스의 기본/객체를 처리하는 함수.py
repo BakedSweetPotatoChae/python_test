@@ -1,4 +1,29 @@
+def create_student(name,math,english):
+    return{
+        "name":name,
+        "math":math,
+        "english":english
+    }
 
+def student_sum(student):
+    return student["english"]+student["math"]
+
+def student_average(student):
+    return student_sum(student) / 2
+
+def student_string(student):
+    print(student["name"],student["math"],student["english"],student_sum(student),student_average(student),sep="\t")
+
+
+sutdents = [
+    create_student("채승병",2,6),
+    create_student("냥냥이",5,5)
+]
+
+student_string(sutdents[0])
+student_string(sutdents[1])
+
+'''
 def create_student(name, korean, math, english, science):
     return {
         "name": name,
@@ -42,7 +67,7 @@ for student in students:
 
 
 
-'''
+
 def create_item(name, a,b,c,d,e):
     return{
     "name":name,
