@@ -12,4 +12,4 @@ for i in range(number):
     text_list[i] = str(input())
 
 
-for i in range()
+#for i in range()
