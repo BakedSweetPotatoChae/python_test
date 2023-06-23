@@ -1,29 +1,32 @@
-class Student:
-    def __init__(self,name,korean,math,english,science):
+class student:
+    def __init__(self, name, math, english, korean):
         self.name = name
-        self.korean = korean
         self.math = math
         self.english = english
-        self.science = science
-
-    def get_sum(self):
-        return self.korean + self.math + self.english + self.science
+        self.korean = korean
     
-    def get_average(self):
-        return self.get_sum() / 4
-    
-    def to_string(self):
-        return "{}\t{}\t{}".format(self.name, self.get_sum(), self.get_average())
+    def student_sum(self):
+        """
+        학생의 총점을 구하는 함수
+        """
+        return self.math + self.english + self.korean
     
 
-students = [
-    Student("윤인성",90,98,56,12),
-    Student("윤인앙",90,1,56,12),
-    Student("윤인인",90,4,56,12),
-    Student("윤인잉",90,95,100,12)
+    def student_average(self):
+        """
+        학생의 평균을 구하는 함수
+        """
+        return self.student_sum() / 3
+
+
+    def student_string(self):
+        return "{}\t{}\t{}".format(self.name, self.student_sum(), self.student_average())
+
+
+Students = [
+    student("ddd",14,34,44),
+    student("dad",14,34,44)
 ]
 
-print("이름","총점","평균",sep = "\t")
-
-for student in students:
-    print(student.to_string())
+for i in Students:
+    print(i.student_string())
