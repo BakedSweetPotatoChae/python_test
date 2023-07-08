@@ -6,7 +6,7 @@ count = 0
 
 for j in range(1, i+1):
     if(i%j == 0):
-        print("in")
+        #print("in")
         arr.append(j)
 
 if(k <= len(arr)):
