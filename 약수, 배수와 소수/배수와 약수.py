@@ -8,6 +8,6 @@ while True:
     if(number_2 % number_1 == 0):
         print("factor")
     elif(number_1 % number_2 == 0):
-        print("mltiple")
+        print("multiple")
     else:
         print("neither")
