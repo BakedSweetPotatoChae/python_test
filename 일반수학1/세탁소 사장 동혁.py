@@ -17,3 +17,6 @@ for j in range(m):
     for i in coin_save:
         print(i,end=" ")
     print()
+
+
+#그리디 알고리즘
